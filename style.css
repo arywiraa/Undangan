@@ -23,15 +23,15 @@ body {
 }
 
 /* Desktop centering */
-@media (min-width: 812px) {
+@media (min-width: 768px) {
     body {
         display: flex;
         justify-content: center;
         background: #d4c4b0;
     }
     .mobile-container {
-        width: 435px;
-        max-width: 435px;
+        width: 375px;
+        max-width: 375px;
         box-shadow: 0 0 50px rgba(0,0,0,0.3);
         position: relative;
     }
@@ -148,7 +148,6 @@ body.scroll-locked {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
 }
 
 .swipe-indicator {
