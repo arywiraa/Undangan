@@ -11,12 +11,31 @@ let bgMusic;
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
+    // Reset to top on page load/refresh
+    window.scrollTo(0, 0);
+    document.body.classList.add('scroll-locked');
+    
+    // Ensure starting from cover
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 100);
+    
     loadUcapan();
     startCountdown();
     
-    // Initialize background music (uncomment jika sudah ada file MP3)
+    // Initialize background music
     bgMusic = document.getElementById('bg-music');
 });
+
+// Force scroll to top on page refresh/reload
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0);
+});
+
+// Prevent scroll restoration
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 
 // ============================================
 // OPEN INVITATION
@@ -27,6 +46,10 @@ function openInvitation() {
         bgMusic.play().catch(e => console.log('Autoplay prevented'));
     }
     
+    // Show audio control button
+    const audioControl = document.getElementById('audio-control');
+    audioControl.classList.add('show');
+
     // Load and play video
     const videoPlayer = document.getElementById('video-player');
     videoPlayer.src = 'https://www.youtube.com/embed/Xene8hPdFqw?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=Xene8hPdFqw';
@@ -40,7 +63,7 @@ function openInvitation() {
     // Start video lock mechanism
     setTimeout(() => {
         lockScrollDuringVideo();
-    }, 1000);
+    }, 125500);
 }
 
 // ============================================
@@ -274,3 +297,25 @@ window.addEventListener('scroll', () => {
         floatingNav.classList.remove('show');
     }
 });
+
+// ============================================
+// TOGGLE AUDIO (MUTE/UNMUTE)
+// ============================================
+function toggleAudio() {
+    const audioControl = document.getElementById('audio-control');
+    const audioIcon = document.getElementById('audio-icon');
+    
+    if (bgMusic) {
+        if (bgMusic.paused) {
+            // Play music
+            bgMusic.play();
+            audioIcon.className = 'fas fa-volume-up';
+            audioControl.classList.remove('muted');
+        } else {
+            // Pause music
+            bgMusic.pause();
+            audioIcon.className = 'fas fa-volume-mute';
+            audioControl.classList.add('muted');
+        }
+    }
+}
