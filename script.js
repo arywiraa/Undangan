@@ -13,19 +13,26 @@ let bgMusic;
 document.addEventListener('DOMContentLoaded', function() {
     loadUcapan();
     startCountdown();
+})
+    // ============================================
+// INITIALIZATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    loadUcapan();
+    startCountdown();
     
-    // Initialize background music (uncomment jika sudah ada file MP3)
-    // bgMusic = document.getElementById('bg-music');
-});
+    // Initialize background music
+    bgMusic = document.getElementById('bg-music');
+}); // ← Ini yang kurang
 
 // ============================================
 // OPEN INVITATION
 // ============================================
 function openInvitation() {
-    // Play background music
-    // if (bgMusic) {
-    //     bgMusic.play().catch(e => console.log('Autoplay prevented'));
-    // }
+    // Play background music ← Tambah // di awal
+    if (bgMusic) {
+        bgMusic.play().catch(e => console.log
+    )}
     
     // Smooth scroll to video section
     document.getElementById('video-section').scrollIntoView({
@@ -35,7 +42,7 @@ function openInvitation() {
     // Start video lock mechanism
     setTimeout(() => {
         lockScrollDuringVideo();
-    }, 1000);
+    }, 126000);
 }
 
 // ============================================
@@ -54,9 +61,11 @@ function lockScrollDuringVideo() {
         swipeIndicator.classList.add('show');
         body.classList.remove('scroll-locked');
         videoWatched = true;
-        
-        // Show floating navbar
         floatingNav.classList.add('show');
+        
+        // Enable video controls
+        const iframe = document.getElementById('video-player');
+        iframe.src = iframe.src.replace('controls=0', 'controls=1');
     }, 10000); // 10 detik, sesuaikan dengan durasi video
 }
 
