@@ -13,26 +13,24 @@ let bgMusic;
 document.addEventListener('DOMContentLoaded', function() {
     loadUcapan();
     startCountdown();
-})
-    // ============================================
-// INITIALIZATION
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    loadUcapan();
-    startCountdown();
     
-    // Initialize background music
+    // Initialize background music (uncomment jika sudah ada file MP3)
     bgMusic = document.getElementById('bg-music');
-}); // ← Ini yang kurang
+});
 
 // ============================================
 // OPEN INVITATION
 // ============================================
 function openInvitation() {
-    // Play background music ← Tambah // di awal
+    // Play background music
     if (bgMusic) {
-        bgMusic.play().catch(e => console.log
-    )}
+        bgMusic.play().catch(e => console.log('Autoplay prevented'));
+    }
+    
+    // Load and play video
+    const videoPlayer = document.getElementById('video-player');
+    videoPlayer.src = 'https://www.youtube.com/embed/Xene8hPdFqw?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=Xene8hPdFqw';
+    // GANTI URL VIDEO DI ATAS dengan kode video YouTube kamu
     
     // Smooth scroll to video section
     document.getElementById('video-section').scrollIntoView({
@@ -42,7 +40,7 @@ function openInvitation() {
     // Start video lock mechanism
     setTimeout(() => {
         lockScrollDuringVideo();
-    }, 126000);
+    }, 1000);
 }
 
 // ============================================
@@ -61,11 +59,9 @@ function lockScrollDuringVideo() {
         swipeIndicator.classList.add('show');
         body.classList.remove('scroll-locked');
         videoWatched = true;
-        floatingNav.classList.add('show');
         
-        // Enable video controls
-        const iframe = document.getElementById('video-player');
-        iframe.src = iframe.src.replace('controls=0', 'controls=1');
+        // Show floating navbar
+        floatingNav.classList.add('show');
     }, 10000); // 10 detik, sesuaikan dengan durasi video
 }
 
