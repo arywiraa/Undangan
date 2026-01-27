@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya & Reva - 14 February 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="scroll-locked">
+    <div class="mobile-container">
+        <!-- Cover Section -->
+        <section id="cover">
+            <div class="cover-content">
+                <div class="cover-ornament">✦</div>
+                <h1 class="cover-title">Arya & Reva</h1>
+                <p class="cover-date">14 FEBRUARY 2026</p>
+                <button class="btn-open" onclick="openInvitation()">
+                    <i class="fas fa-envelope-open"></i> Buka Undangan
+                </button>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video-section">
+            <div class="video-container">
+                <iframe 
+                    id="video-player"
+                    src="https://www.youtube.com/embed/ftwbzIsMO20?autoplay=1&mute=1&rel=0&controls=1"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="swipe-indicator" id="swipe-indicator">
+                Scroll ke atas
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown" class="section">
+            <h2 class="section-title">Menuju Hari Bahagia</h2>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Hari</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Jam</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Menit</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Detik</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ayat Section -->
+        <section id="ayat" class="section">
+            <h2 class="section-title" style="color: white;">✦</h2>
+            <p class="ayat-text">
+                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+            </p>
+            <p class="ayat-source">— QS. Ar-Rum: 21 —</p>
+        </section>
+
+        <!-- Mempelai Section -->
+        <section id="mempelai" class="section">
+            <h2 class="section-title">Mempelai</h2>
+            <div class="mempelai-container">
+                <div class="mempelai-card">
+                    <div class="mempelai-photo">👨</div>
+                    <h3 class="mempelai-name">Arya</h3>
+                    <p class="mempelai-desc">Putra ke-2 dari 3 bersaudara</p>
+                </div>
+                <div class="mempelai-card">
+                    <div class="mempelai-photo">👩</div>
+                    <h3 class="mempelai-name">Reva</h3>
+                    <p class="mempelai-desc">Putri ke-2 dari 2 bersaudara</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detail Acara Section -->
+        <section id="detail-acara" class="section">
+            <h2 class="section-title">Detail Acara</h2>
+            <div class="detail-card">
+                <h3 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--dark-sage); margin-bottom: 20px;">Akad & Resepsi</h3>
+                
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="far fa-calendar"></i></div>
+                    <div class="detail-text">
+                        <h3>Tanggal</h3>
+                        <p>14 Februari 2026</p>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="far fa-clock"></i></div>
+                    <div class="detail-text">
+                        <h3>Waktu</h3>
+                        <p>10.00 WIB - Selesai</p>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="detail-text">
+                        <h3>Lokasi</h3>
+                        <p>Grand Ballroom Hotel Mulia<br>Jl. Asia Afrika No. 8, Jakarta Pusat<br>DKI Jakarta 10270</p>
+                    </div>
+                </div>
+
+                <a href="https://www.google.com/maps?q=-6.2088,106.8456" target="_blank" class="btn-maps">
+                    <i class="fas fa-map-marked-alt"></i> Lihat Lokasi di Google Maps
+                </a>
+            </div>
+        </section>
+
+        <!-- Galeri Section -->
+        <section id="galeri" class="section">
+            <h2 class="section-title">Galeri Prewedding</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section id="quote" class="section">
+            <p class="quote-text">
+                "Cinta sejati bukanlah tentang menemukan seseorang yang sempurna, tetapi tentang melihat kesempurnaan dalam ketidaksempurnaan seseorang."
+            </p>
+        </section>
+
+        <!-- Kado Digital Section -->
+        <section id="kado" class="section">
+            <h2 class="section-title">Kado Digital</h2>
+            <div class="kado-card">
+                <div class="bank-icon">🏦</div>
+                <div class="bank-name">Bank Mandiri</div>
+                <div class="account-number" id="account-number">1234567890</div>
+                <div class="account-name">a.n. Arya & Reva</div>
+                <button class="btn-copy" onclick="copyAccountNumber()">
+                    <i class="far fa-copy"></i> Salin Nomor Rekening
+                </button>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="section">
+            <h2 class="section-title">RSVP & Ucapan</h2>
+            
+            <form class="rsvp-form" onsubmit="submitRSVP(event)">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Konfirmasi Kehadiran</label>
+                    <select id="kehadiran" required>
+                        <option value="">Pilih kehadiran</option>
+                        <option value="Hadir">Hadir</option>
+                        <option value="Tidak Hadir">Tidak Hadir</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Ucapan & Doa</label>
+                    <textarea id="ucapan" placeholder="Berikan ucapan dan doa untuk kami..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Kirim Ucapan
+                </button>
+            </form>
+
+            <div class="ucapan-list" id="ucapan-list">
+                <!-- Ucapan akan muncul di sini -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <p class="footer-title">Arya & Reva</p>
+            <p class="footer-year">2026</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.8;">
+                Terima kasih atas kehadiran dan doa restu Anda
+            </p>
+        </section>
+
+        <!-- Floating Navbar -->
+        <div class="floating-navbar" id="floating-navbar">
+            <div class="nav-item" onclick="scrollToSection('video-section')">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item" onclick="scrollToSection('mempelai')">
+                <i class="fas fa-user-friends"></i>
+                <span>Couple</span>
+            </div>
+            <div class="nav-item" onclick="scrollToSection('detail-acara')">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Acara</span>
+            </div>
+            <div class="nav-item" onclick="scrollToSection('rsvp')">
+                <i class="fas fa-book"></i>
+                <span>RSVP</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Music (Uncomment dan ganti path sesuai file MP3 kamu) -->
+    <!-- <audio id="bg-music" loop>
+        <source src="path/to/your/music.mp3" type="audio/mpeg">
+    </audio> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
