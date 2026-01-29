@@ -51,7 +51,6 @@ body.scroll-locked {
 /* Cover Section */
 #cover {
     height: 100vh;
-    background: linear-gradient(135deg, var(--sage-green) 0%, var(--dark-sage) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,22 +59,11 @@ body.scroll-locked {
     overflow: hidden;
 }
 
-#cover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-    background-size: cover;
-    opacity: 0.3;
-}
-
 .cover-content {
     text-align: center;
     z-index: 2;
-    animation: fadeInUp 1.5s ease;
+    padding: 0 20px;
+    padding-top: 20rem;
 }
 
 .cover-ornament {
@@ -95,10 +83,11 @@ body.scroll-locked {
 }
 
 .cover-date {
-    font-size: 1.1rem;
-    color: var(--warm-beige);
-    letter-spacing: 2px;
-    margin-bottom: 3rem;
+    font-size: 1rem;
+    color: var(--dark-sage);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    animation: none;
 }
 
 .btn-open {
@@ -112,6 +101,8 @@ body.scroll-locked {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: inline-block;
+    animation: fadeInUp 1.5s ease;
 }
 
 .btn-open:hover {
@@ -124,7 +115,6 @@ body.scroll-locked {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: var(--sage-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,7 +129,7 @@ body.scroll-locked {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-    border: 5px solid rgba(255,255,255,0.2);
+    border: 5px solid rgb(216, 169, 102);
 }
 
 .video-container iframe {
@@ -148,11 +138,12 @@ body.scroll-locked {
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
 
 .swipe-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -161,6 +152,8 @@ body.scroll-locked {
     opacity: 0;
     transition: opacity 0.5s;
     z-index: 10;
+    pointer-events: none;
+    text-align: center;
 }
 
 .swipe-indicator.show {
@@ -171,6 +164,15 @@ body.scroll-locked {
     display: block;
     margin-top: 5px;
     font-size: 1.5rem;
+}
+
+.video-divider {
+    position: absolute;
+    bottom: 296rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 375px;
+    height: auto;
 }
 
 /* Main Content */
@@ -614,7 +616,7 @@ body.scroll-locked {
 }
 
 .floating-navbar.show {
-    opacity: 1;
+    opacity: 2;
 }
 
 .nav-item {

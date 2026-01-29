@@ -63,7 +63,7 @@ function openInvitation() {
     // Start video lock mechanism
     setTimeout(() => {
         lockScrollDuringVideo();
-    }, 125500);
+    }, 0);
 }
 
 // ============================================
@@ -85,7 +85,7 @@ function lockScrollDuringVideo() {
         
         // Show floating navbar
         floatingNav.classList.add('show');
-    }, 10000); // 10 detik, sesuaikan dengan durasi video
+    }, 0); // 10 detik, sesuaikan dengan durasi video
 }
 
 // ============================================
