@@ -66,37 +66,21 @@ body.scroll-locked {
     padding-top: 20rem;
 }
 
-.cover-ornament {
-    font-size: 3rem;
-    color: var(--cream);
-    margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite;
-}
-
-.cover-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--cream);
-    margin: 1rem 0;
-    letter-spacing: 3px;
-}
-
 .cover-date {
     font-size: 1rem;
     color: var(--dark-sage);
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     animation: none;
 }
 
 .btn-open {
-    padding: 15px 40px;
+    padding: 15px 30px;
     background: var(--cream);
     color: var(--dark-sage);
     border: none;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -114,7 +98,7 @@ body.scroll-locked {
 #video-section {
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,7 +127,7 @@ body.scroll-locked {
 
 .swipe-indicator {
     position: absolute;
-    bottom: 60px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -166,13 +150,16 @@ body.scroll-locked {
     font-size: 1.5rem;
 }
 
+/* Video Flower Divider */
 .video-divider {
     position: absolute;
-    bottom: 296rem;
+    bottom: -180px;
     left: 50%;
     transform: translateX(-50%);
-    width: 375px;
+    width: 100%;
     height: auto;
+    pointer-events: none;
+    z-index: 10;
 }
 
 /* Main Content */
